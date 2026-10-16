@@ -1,0 +1,423 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #100b1b;
+    color: #f6f2ff;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #30253e;
+    background: #100b1b;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.logo span,
+.hero h1 span {
+    color: #bd91ff;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    color: #d0c6df;
+}
+
+nav a:hover {
+    color: #bd91ff;
+}
+
+.hero {
+    min-height: 540px;
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.tag {
+    color: #bd91ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.12;
+    margin: 20px 0;
+}
+
+.hero-content > p:not(.tag):not(.note) {
+    color: #c6bdcf;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+.primary-btn,
+.secondary-btn {
+    border: none;
+    border-radius: 9px;
+    padding: 13px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.primary-btn {
+    background: #a979f7;
+    color: #160d22;
+}
+
+.primary-btn:hover {
+    background: #c5a3ff;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #30243e;
+    color: white;
+    border: 1px solid #514064;
+}
+
+.secondary-btn:hover {
+    background: #413052;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.note,
+.small-note {
+    font-size: 12px;
+    color: #a99cb9;
+    margin-top: 18px;
+}
+
+.hero-card,
+.feature-card,
+.interview-panel {
+    background: #1b1428;
+    border: 1px solid #392b4b;
+    border-radius: 18px;
+}
+
+.hero-card {
+    padding: 30px;
+    box-shadow: 0 20px 70px #00000025;
+}
+
+.orb {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background: #392453;
+    border-radius: 16px;
+    font-size: 30px;
+    color: #d4b5ff;
+    margin-bottom: 22px;
+}
+
+.muted {
+    font-size: 12px;
+    color: #b7a5ca;
+}
+
+.hero-card h2 {
+    font-size: 27px;
+    margin: 8px 0 24px;
+}
+
+.mini-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-top: 1px solid #392b4b;
+    color: #d8cce8;
+}
+
+.features,
+.practice-section {
+    padding: 80px 8%;
+}
+
+.features {
+    background: #171021;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 38px;
+    max-width: 680px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 10px 0;
+}
+
+.section-heading > p:last-child {
+    color: #bcb0ca;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 28px;
+}
+
+.feature-icon {
+    color: #c5a3ff;
+    background: #302041;
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #bcb0ca;
+    font-size: 14px;
+}
+
+.interview-panel {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.setup {
+    display: grid;
+    gap: 14px;
+}
+
+label {
+    display: block;
+    margin: 16px 0 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    color: white;
+    background: #110b1a;
+    border: 1px solid #49365e;
+    border-radius: 9px;
+    font: inherit;
+}
+
+select:focus,
+textarea:focus {
+    outline: 2px solid #a979f7;
+    border-color: transparent;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.interview-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: #c5a3ff;
+    font-weight: bold;
+}
+
+#timer {
+    color: #f0cf8a;
+    font-variant-numeric: tabular-nums;
+}
+
+.progress-track {
+    height: 6px;
+    margin: 18px 0;
+    background: #392b4b;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0;
+    background: #a979f7;
+    transition: width 0.3s;
+}
+
+#progressText {
+    font-size: 13px;
+    color: #bcb0ca;
+}
+
+#question {
+    font-size: 23px;
+    margin: 15px 0 22px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.feedback {
+    padding: 18px;
+    margin-top: 18px;
+    border: 1px solid #59406d;
+    background: #241a31;
+    border-radius: 10px;
+}
+
+.feedback h4 {
+    color: #d4b5ff;
+    margin-bottom: 8px;
+}
+
+.feedback ul {
+    padding-left: 20px;
+}
+
+.feedback li {
+    margin: 5px 0;
+}
+
+#results {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#results h2 {
+    margin: 15px 0;
+}
+
+#resultSummary,
+#resultAdvice {
+    color: #c6bdcf;
+    margin: 12px 0;
+}
+
+.result-icon {
+    display: grid;
+    place-items: center;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #392453;
+    color: #d4b5ff;
+    font-size: 30px;
+}
+
+#restartBtn {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 1px solid #30253e;
+    color: #bcb0ca;
+}
+
+footer p {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    nav {
+        gap: 14px;
+        font-size: 13px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .features,
+    .practice-section {
+        padding: 60px 6%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interview-panel {
+        padding: 22px;
+    }
+
+    #question {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+}
